@@ -1,7 +1,7 @@
 /* Fontes */
 @font-face {
     font-family: "Minecraft";
-    src: url('/feedTheCat/fonts/minecraft/Minecraft.ttf') format('truetype'); 
+    src: url('feedTheCat/fonts/minecraft/Minecraft.ttf') format('truetype'); 
 }
 
 * {
