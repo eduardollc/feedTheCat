@@ -1,0 +1,91 @@
+/* Fontes */
+@font-face {
+    font-family: "Minecraft";
+    src: url('/catSite/fonts/minecraft/Minecraft.ttf') format('truetype'); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Título principal */
+.titulo-principal {
+    grid-column: 1 / 4;
+    background-color: #2b2c2c;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    font-family: 'Minecraft';
+}
+
+/* Centro */
+.centro {
+    background-color: #fcfdfc;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Rodapé */
+.rodape {
+    grid-column: 1 / 4;
+    background-color: #2f2f30;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.area-gato {
+    width: 500px;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gatoInicial {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+h1 {
+    font-family: 'Minecraft', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+}
+
+#botao-alimentar {
+     border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: fit-content;
+    cursor: pointer;
+    line-height: 0;
+}
+
+#botao-alimentarPixelado {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+}

@@ -3,13 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Feed the cat </title>
+    <title> Alimente o Gato </title>
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
-    <h1> Feed the cat </h1>
+    <header class="titulo-principal">
+        <h1>Alimente o Gato</h1>
+    </header>
 
-    
-    
+
+    <main class="centro">
+
+    <div class="area-gato">
+    <img
+        id="gatoInicial"
+        class="gatoInicial"
+        src="images/gatoNormal.png"
+        alt="Gato"
+    >
+    </div>
+
+    <button id="botao-alimentar" onclick="alimentarGato()">
+        <img
+            id="botao-alimentarPixelado"
+            src="images/botaoAlimentarPixelado.png"
+            alt="Alimentar gato"
+        >
+    </button>
+
+    </main>
+
+
+    <footer class="rodape">
+
+        <h1>O gato foi alimentado <span id="contador">0</span> vezes</h1>
+
+    </footer>
+
 </body>
+
+<script>
+let contador = 0;
+let temporizador;
+
+function alimentarGato() {
+
+    const gato = document.getElementById("gatoInicial");
+
+    contador++;
+    document.getElementById("contador").textContent = contador;
+
+    gato.src = "images/gatoFeliz.png";
+
+    // Cancela o temporizador anterior
+    clearTimeout(temporizador);
+
+    // Volta ao normal após 3 segundos do último clique
+    temporizador = setTimeout(function() {
+        gato.src = "images/gatoNormal.png";
+    }, 1500);
+}
+</script>
+
 </html>
